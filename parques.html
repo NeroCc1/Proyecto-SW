@@ -37,16 +37,16 @@
 			<div class="collapse navbar-collapse" id="mynavbar">
 				<ul class="navbar-nav me-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="index.html" class="">Xalapa lugares</a>
+						<a class="nav-link" href="index.html" class=""aria-labelledby="boton ventana principal"(link opens in a new tab)>Xalapa lugares</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="parques.html">Parques</a></a>
+						<a class="nav-link" href="parques.html" aria-labelledby="boton redireccion a pagina parques"(link opens in a new tab)>Parques</a></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)">Hoteles</a>
+						<a class="nav-link" href="javascript:void(0)"aria-labelledby="boton redireccion a pagina hoteles"(link opens in a new tab)>Hoteles</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)">Plazas</a>
+						<a class="nav-link" href="javascript:void(0)"aria-labelledby="boton redireccion a pagina plaza"(link opens in a new tab)>Plazas</a>
 					</li>
 				</ul>
 				
@@ -70,9 +70,8 @@
 							<p class="card-text" style="color:black">Parque agradable para pasear en todo momento</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<a href="#" btn="bConsultar" class=" btn btn-primary">Detalles</a>
-								</div>
-								<a href="#" class="btn btn-success">Detalles</a>
+									<a href="#" btn="bConsultar" aria-labelledby="boton de mas detalles sobre contenido de "(link opens in a new tab)class=" btn btn-primary">Detalles</a>
+								</div>								
 							</div>
 						</div>
 					</div>
@@ -82,46 +81,12 @@
 		</div>
 	</main>
 
-	<section class="social" style="color: black;">
-		<p>Follow Xalapa lugares</p>
-		<div class="links">
-			<a href="#">
-				<i class="fab fa-facebook-f" style="color: black;"></i>
-			</a>
-			<a href="#">
-				<i class="fab fa-twitter" style="color: black;"></i>
-			</a>
-			<a href="#">
-				<i class="fab fa-linkedin" style="color: black;"></i>
-			</a>
-		</div>
+	<section class="social">		
 
 	</section>
 
 	<div class="footer-links">
-		<div class="footer-container">
-			<ul>
-				<li>
-					<a href="#">
-						<h3>Title one</h3>
-					</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-			</ul>
+		<div class="footer-container">			
 			<ul>
 				<li>
 					<a href="#">
@@ -134,15 +99,7 @@
 				<li>
 					<a href="#">Blockchain</a>
 				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
+
 			</ul>
 			<ul>
 				<li>
@@ -156,38 +113,9 @@
 				<li>
 					<a href="#">Blockchain</a>
 				</li>
-				<li>
-					<a href="#">Blockchain</a>
+
 				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="#">
-						<h3>Title four</h3>
-					</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-				<li>
-					<a href="#">Blockchain</a>
-				</li>
-			</ul>
+			</ul>			
 		</div>
 	</div>
 
@@ -211,8 +139,7 @@
 				.catch(function (error) {
 					console.log(error);
 				});
-		})
-		var bConsultar = document.getElementById("detalles")
+		})		
 
 		function datos(response) {
 			const myObj = JSON.parse(JSON.stringify(response));
