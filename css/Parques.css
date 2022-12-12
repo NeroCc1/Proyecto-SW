@@ -20,11 +20,15 @@ a{
 ul{
     list-style: none;
 }
+.card-body{
+    color: black;
+}
+
 main>.container {
     padding: 30px 0;
 }
-.bg-color{
-    background-color:#008037 !important; 
+.bg-dark{
+    background-color:#008037; 
 }
 .navbarr{
    background-color:#008037;
@@ -35,6 +39,9 @@ main>.container {
 }
 .navbar-inverse .navbar-nav > li > a{
    color: white;
+}
+.navbar{
+    background-color: #008037
 }
 
 .nav {
@@ -279,6 +286,6 @@ hr{
        padding: 60px 20px;
    }
    .footer-links .footer-container{
-       grid-template-columns: 1fr;
+       grid-template-columns: 1fr;       
    }
 }
