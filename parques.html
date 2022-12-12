@@ -203,7 +203,7 @@
 			let descripcion_ = document.getElementById("id3").value
 			let precio_ = document.getElementById("id4").value
 			console.log(nombre_ + " " + descripcion_ + " " + precio_)
-			axios.get("https://despliegue-production-d251.up.railway.app/usuarios")
+			axios.get("https://proyectoswbackend-production-37a9.up.railway.app/parques")
 				.then(function (response) {
 					console.log(response);
 					tabla(response.data)
