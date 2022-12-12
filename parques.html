@@ -23,7 +23,7 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 	<!--CUSTOM CSS-->
-	<link rel="stylesheet" href="styless.css">
+	<link rel="stylesheet" href="css/Parques.css">
 </head>
 
 <body>
@@ -59,8 +59,8 @@
 
 	<!--Contenido-->
 	<main>
-		<header>
-			<h1 class="titleP" style="text-align: center; color: black;" >Parques</h1>
+		<header class="titleP">
+			<h3>Parques</h1>
 		</header>
 		<div class="container">
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -69,12 +69,13 @@
 					<div class="card shadow-sm">
 						<img src="img/parques-xalapa.jpg">
 						<div class="card-body">
-							<h2 class="card-title" style="color:black">Parque xalapa</h5>
-							<p class="card-text"style="color:black">Parque agradable para pasear en todo momento</p>
+							<h1 class="card-title" script=" ">Parque xalapa</h1>
+							<p class="card-text" style="color:black">Parque agradable para pasear en todo momento</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
-									<a href="#" class="btn btn-primary">Detalles</a>
-								</div>								
+									<a href="#" id="detalles" class=" btn btn-primary">Detalles</a>
+								</div>
+								<a href="#" class="btn btn-success">Detalles</a>
 							</div>
 						</div>
 					</div>
@@ -84,21 +85,17 @@
 		</div>
 	</main>
 
-
-
-
-
-	<section class="social">
+	<section class="social" style="color: black;">
 		<p>Follow Xalapa lugares</p>
 		<div class="links">
 			<a href="#">
-				<i class="fab fa-facebook-f"></i>
+				<i class="fab fa-facebook-f" style="color: black;"></i>
 			</a>
 			<a href="#">
-				<i class="fab fa-twitter"></i>
+				<i class="fab fa-twitter" style="color: black;"></i>
 			</a>
 			<a href="#">
-				<i class="fab fa-linkedin"></i>
+				<i class="fab fa-linkedin" style="color: black;"></i>
 			</a>
 		</div>
 
@@ -200,6 +197,39 @@
 	<footer class="footer">
 		<h3>Xalapa place Copyright</h3>
 	</footer>
+
+
+	<script>
+		bConsultar.addEventListener("click", function () {
+			let id_ = document.getElementById("id1").value
+			let nombre_ = document.getElementById("id2").value
+			let descripcion_ = document.getElementById("id3").value
+			let precio_ = document.getElementById("id4").value
+			console.log(nombre_ + " " + descripcion_ + " " + precio_)
+			axios.get("https://despliegue-production-d251.up.railway.app/usuarios")
+				.then(function (response) {
+					console.log(response);
+					tabla(response.data)
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		})
+		var bConsultar = document.getElementById("detalles")
+
+		function datos(response) {
+			const myObj = JSON.parse(JSON.stringify(response));
+			console.log(myObj)
+			let text = myobj[x].id
+			text += "<thead><th>ID</th><th>Nombre</th><th>Password</th></thead>"
+			for (let x in myObj) {
+                text += "<tr><td>" + myObj[x].id + "</td><td>" + myObj[x].nombre + "</td><td>" + myObj[x].password + "</td></tr>";
+            }
+            text += "</tbody></table>"    
+            document.getElementById("usuarios").innerHTML = text;
+		}
+	</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
