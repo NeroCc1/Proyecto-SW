@@ -21,17 +21,22 @@
  	list-style: none;
  }
  .navbarr{
-	background-color:#5d7e62;
+	background-color:#008037;
 	width: 100%;	
  }
- .navbar-nav{	
-	
- 	display: flex;
- 	justify-content: space-between;
- 	align-items: center; 	 	
+ .navbar-inverse{
+	background-color: #008037		
  }
+ .navbar-inverse .navbar-nav > li > a{
+	color: white;
+ }
+
+ .nav {
+	color: white;
+ }
+ 
  .navbar-form{
-	align-self: left;
+	align-self: left;	
  }
  p{
 	font-size: 25px;
@@ -39,6 +44,9 @@
  h3{
 	font-size: 30px;
 	
+ }
+ .navbar-nav{
+	color: white;
  }
  .container{
  	width: 90%;
